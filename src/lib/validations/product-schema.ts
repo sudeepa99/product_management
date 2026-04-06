@@ -29,4 +29,5 @@ export const productSchema = z.object({
     }, "Please enter a valid image URL"),
 });
 
-export type ProductFormValues = z.infer<typeof productSchema>;
+export type ProductFormInput = z.input<typeof productSchema>;
+export type ProductFormValues = z.output<typeof productSchema>;
